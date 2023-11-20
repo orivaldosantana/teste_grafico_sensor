@@ -7,7 +7,7 @@ import ss from 'simple-statistics'
 const API_URL = 'http://localhost:3002'
 
 function App() {
-  const [frenquencyData, setFrequencyData] = useState([])
+  const [temperatureData, setTemperatureData] = useState([])
   const [startTime, setStartTime] = useState('03:00:00')
   const [endTime, setEndTime] = useState('12:00:00')
   const [startDate, setStartDate] = useState('2023-11-17')
@@ -33,7 +33,7 @@ function App() {
           console.log(tempMedian)
           dataTemp.push({ name: h, temp: tempMedian })
         }
-        setFrequencyData(dataTemp)
+        setTemperatureData(dataTemp)
       } catch (error) {
         console.error('Erro ao buscar dados da API:', error)
       }
@@ -43,8 +43,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Gráfico de frequência</h1>
-      <FrequencyChart data={frenquencyData} />
+      <h1>Gráfico de Temperatura</h1>
+      <FrequencyChart data={temperatureData} />
     </div>
   )
 }
