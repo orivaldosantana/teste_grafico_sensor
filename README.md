@@ -37,6 +37,17 @@ Para usar funções estatísticas, como a mediana:
 npm install simple-statistics
 ```
 
+## Execução 
+Instalação automática de pacotes 
+```
+npm install
+```
+
+Execução 
+```
+npm start
+```
+
 # Referências
 
 - [Recharts](https://recharts.org/en-US)
